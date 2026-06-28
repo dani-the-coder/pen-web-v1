@@ -293,7 +293,9 @@ img {
   transition: padding .3s var(--ease);
 }
 
-.nav.scrolled { padding-top: 10px; }
+.nav.scrolled {
+  padding-top: 10px;
+}
 
 .nav .wrap {
   pointer-events: auto;
@@ -327,7 +329,8 @@ img {
 .brand img {
   height: 40px;
   width: auto;
-  filter: brightness(0) invert(1);     /* white logo on the dark pill */
+  filter: brightness(0) invert(1);
+  /* white logo on the dark pill */
   transition: height .3s var(--ease);
 }
 
@@ -372,7 +375,8 @@ img {
   height: 44px;
   display: grid;
   place-items: center;
-  border-radius: 12px;                 /* rounded-square, like the reference */
+  border-radius: 12px;
+  /* rounded-square, like the reference */
   color: #fff;
   border: 1px solid rgba(255, 255, 255, .18);
   background: rgba(255, 255, 255, .04);
@@ -2820,7 +2824,7 @@ img {
 }
 
 .h3d-info {
-  width: min(40%, 460px);
+  width: min(50%, 50%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
