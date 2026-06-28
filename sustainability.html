@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sustainability | PEN Foundation by C-DISC Technologies</title>
+  <meta name="description" content="PEN Foundation sustainability: ~100 kg CO₂-eq avoided per unit, ~93% less cement, 50-year service life. ISO 14040/44 LCA, GRIHA Criterion 30 certified, NIT Calicut validated. Kozhikode, Kerala." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cdisc.in/sustainability" />
+  <meta property="og:title" content="Sustainability | PEN Foundation by C-DISC Technologies" />
+  <meta property="og:description" content="Verifiable carbon and cement savings, backed by an ISO-compliant LCA and GRIHA Criterion 30 certification." />
+  <link rel="icon" type="image/png" href="PEN-Logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a href="index.html" class="brand" aria-label="PEN Foundation home">
+        <img src="PEN-Logo.png" alt="PEN Foundation by C-DISC Technologies" />
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#technology">Technology</a>
+        <a href="index.html#performance">Performance</a>
+        <a href="index.html#proof">Projects</a>
+        <a href="sustainability.html" class="active" aria-current="page">Sustainability</a>
+        <a href="index.html#calculator">Calculator</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%27m%20interested%20in%20PEN%20Foundation" class="nav-icon" aria-label="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+        <a href="tel:+91XXXXXXXXXX" class="nav-icon" aria-label="Call us"><i class="ri-phone-line"></i></a>
+        <a href="index.html#cta" class="btn btn-primary">Book Assessment</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-3-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mm-head">
+      <img src="PEN-Logo.png" alt="PEN Foundation" />
+      <button class="nav-toggle" id="navClose" aria-label="Close menu"><i class="ri-close-line"></i></button>
+    </div>
+    <nav>
+      <a href="index.html#technology" data-close>Technology</a>
+      <a href="index.html#performance" data-close>Performance</a>
+      <a href="index.html#proof" data-close>Projects</a>
+      <a href="sustainability.html" data-close>Sustainability</a>
+      <a href="index.html#calculator" data-close>Calculator</a>
+    </nav>
+    <div class="mm-actions">
+      <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-wa btn-block" data-close><i class="ri-whatsapp-line"></i> WhatsApp</a>
+      <a href="index.html#cta" class="btn btn-primary btn-block" data-close>Book Assessment</a>
+    </div>
+  </div>
+
+  <!-- ============ SUBHERO ============ -->
+  <section class="subhero" id="top">
+    <div class="wrap">
+      <div class="breadcrumb reveal"><a href="index.html">Home</a> · Sustainability</div>
+      <div class="eyebrow reveal">Faster · Stronger · Greener</div>
+      <h1 class="reveal" style="margin-top:18px">The most sustainable foundation system in India — and we can prove it.</h1>
+      <p class="lead reveal">Every PEN claim on this page is traceable to an ISO-compliant Life Cycle Assessment, GRIHA Criterion 30 certification, and independent validation by NIT Calicut. Real numbers. Verifiable sources. Zero greenwashing.</p>
+      <div class="hero-cta reveal" style="margin-top:30px">
+        <a href="#downloads" class="btn btn-dark btn-lg"><i class="ri-download-2-line"></i> Reports &amp; Downloads</a>
+        <a href="#carbon-calculator" class="btn btn-ghost btn-lg">Carbon Calculator <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 1 · LIVE IMPACT COUNTER ============ -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="impact-strip reveal">
+        <div class="impact-head">
+          <span class="impact-live"><span class="dot"></span> Live Impact</span>
+        </div>
+        <div class="impact-grid">
+          <div class="item"><div class="n" data-count="20000">20,000<small> kg</small></div><div class="l">CO₂-eq avoided</div></div>
+          <div class="item"><div class="n" data-count="52000">52,000<small> kg</small></div><div class="l">Cement saved</div></div>
+          <div class="item"><div class="n" data-count="40" data-suffix="+">40+</div><div class="l">Projects completed</div></div>
+        </div>
+        <div class="impact-foot">Cumulative across all PEN installations · updates as new units are deployed · figures shown are sample data pending live feed integration</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2 · OUR NUMBERS ============ -->
+  <section class="section" id="numbers">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Our Numbers</div>
+        <h2>The savings, measured — not estimated.</h2>
+        <p>Every figure below is drawn directly from our ISO 14040/44 Life Cycle Assessment, conducted by I-NAT Studio. Each is traceable to the source study.</p>
+      </div>
+      <div class="grid cols-4">
+        <div class="metric reveal">
+          <div class="ico"><i class="ri-cloud-line"></i></div>
+          <div class="n">~100<small> kg</small></div>
+          <h3>CO₂-eq avoided / unit</h3>
+          <p>Versus a conventional spread footing, per PEN unit installed.</p>
+          <div class="cite">Source: ISO 14040/44 LCA · GWP-Total A1: 99.5 kg CO₂-eq/unit</div>
+        </div>
+        <div class="metric reveal">
+          <div class="ico"><i class="ri-contrast-drop-2-line"></i></div>
+          <div class="n">~93<small> %</small></div>
+          <h3>Less cement used</h3>
+          <p>Cement is the single biggest embodied-carbon driver in foundations.</p>
+          <div class="cite">Source: ISO 14040/44 LCA (I-NAT Studio)</div>
+        </div>
+        <div class="metric reveal">
+          <div class="ico"><i class="ri-calendar-check-line"></i></div>
+          <div class="n">50<small> yr</small></div>
+          <h3>Service life</h3>
+          <p>Designed for a 50-year service life with predictable performance.</p>
+          <div class="cite">Source: ISO 14040/44 LCA design basis</div>
+        </div>
+        <div class="metric reveal">
+          <div class="ico"><i class="ri-recycle-line"></i></div>
+          <div class="n">100<small> %</small></div>
+          <h3>Modular &amp; recoverable</h3>
+          <p>Components are modular and recoverable at end of life — not landfilled.</p>
+          <div class="cite">Source: ISO 14040/44 LCA design basis</div>
+        </div>
+      </div>
+      <p class="reveal" style="margin-top:22px;font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);background:var(--bg-alt);border-radius:var(--radius-sm);padding:16px 20px">
+        <i class="ri-information-line" style="color:var(--teal)"></i> Data integrity: the figures above are ISO-validated. A separate GREENR scorecard figure (−67 kg CO₂-eq) is self-reported and is therefore not presented as an equivalent claim.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 3 · CERTIFICATIONS & VALIDATION ============ -->
+  <section class="section band-dark" id="certifications">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Certifications &amp; Validation</div>
+        <h2>The only certified foundation product of its kind in India.</h2>
+        <p>A credentialing journey built on third-party validation — with more in the pipeline.</p>
+      </div>
+      <div class="split" style="align-items:start">
+        <div class="timeline reveal">
+          <div class="tl-item">
+            <div class="tl-dot done"><i class="ri-leaf-line"></i></div>
+            <div class="tl-body"><span class="status done">Certified</span><h3>GRIHA Criterion 30 — Innovation</h3><p>Recognised under GRIHA's Innovation criterion for a materially lower-carbon foundation approach.</p></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot done"><i class="ri-shield-check-line"></i></div>
+            <div class="tl-body"><span class="status done">Validated</span><h3>NIT Calicut — Structural Validation</h3><p>Independent structural analysis and load-bearing validation. Confirmed 2.0–2.6× SBC improvement over conventional footings.</p></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot progress"><i class="ri-file-list-3-line"></i></div>
+            <div class="tl-body"><span class="status progress">In Progress</span><h3>BIS Standard</h3><p>Bureau of Indian Standards standardisation underway — a national benchmark for the PEN system.</p></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot progress"><i class="ri-government-line"></i></div>
+            <div class="tl-body"><span class="status progress">Application Submitted</span><h3>BMTPC</h3><p>Application submitted to the Building Materials &amp; Technology Promotion Council for performance appraisal.</p></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="media-frame" data-parallax style="border-color:rgba(255,255,255,.1)">
+            <img src="https://readdy.ai/api/search-image?query=engineering%20research%20laboratory%20NIT%20IIT%20academic%20institution%2C%20scientific%20validation%2C%20technical%20testing%20equipment%2C%20professional%20researchers%2C%20dark%20background%2C%20warm%20lighting&width=560&height=620&seq=proof-lab-v2&orientation=portrait" alt="Academic research validation laboratory" loading="lazy">
+          </div>
+          <div class="specs reveal" style="margin-top:20px;border-color:rgba(255,255,255,.12)">
+            <div class="spec" style="border-color:rgba(255,255,255,.08)"><div class="k">LCA Standard</div><div class="v">ISO 14040/44</div></div>
+            <div class="spec" style="border-color:rgba(255,255,255,.08)"><div class="k">LCA Author</div><div class="v">I-NAT Studio</div></div>
+            <div class="spec" style="border-color:rgba(255,255,255,.08)"><div class="k">Green Rating</div><div class="v">GRIHA Criterion 30</div></div>
+            <div class="spec" style="border-color:rgba(255,255,255,.08)"><div class="k">Model</div><div class="v">CD-PEN-32.3.2.1500</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · PROJECT MAP ============ -->
+  <section class="section" id="map">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Project Map</div>
+        <h2>Proven across India.</h2>
+        <p>From Kerala's Western Ghats to Maharashtra, Bengaluru and Hosur — visible proof of our PAN-India footprint and cumulative impact.</p>
+      </div>
+      <div class="map-wrap reveal">
+        <div class="map-stage">
+          <div class="map-toggle" role="group" aria-label="Map display mode">
+            <button id="mTgLoc" class="active">Locations</button>
+            <button id="mTgCarbon">Carbon saved</button>
+          </div>
+          <div id="projectMap" style="position:absolute;inset:0"></div>
+        </div>
+        <div class="map-side" id="siteList"><!-- site cards injected by JS --></div>
+      </div>
+      <p class="reveal" style="margin-top:18px;font-family:var(--font-mono);font-size:12px;color:var(--ink-soft)"><i class="ri-map-pin-line" style="color:var(--coral)"></i> Sample locations &amp; per-site figures shown for illustration — live project data to be added. Carbon saved estimated at ~100 kg CO₂-eq per unit (ISO LCA).</p>
+    </div>
+  </section>
+
+  <!-- ============ 5 · REPORTS & DOWNLOADS ============ -->
+  <section class="section" id="downloads" style="background:var(--bg-alt)">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Reports &amp; Downloads</div>
+        <h2>The evidence, ready for your tender.</h2>
+        <p>Public-facing documentation builders, architects and investors can cite directly. The library grows as new credentials are registered.</p>
+      </div>
+      <div class="grid cols-2">
+        <a class="doc reveal" href="#" aria-label="Download LCA summary"><div class="ico"><i class="ri-file-chart-2-line"></i></div><div class="info"><h3>LCA Summary (Public)</h3><div class="type">PDF · ISO 14040/44</div></div><i class="ri-download-2-line dl"></i></a>
+        <a class="doc reveal" href="#" aria-label="Download GRIHA certificate"><div class="ico"><i class="ri-award-line"></i></div><div class="info"><h3>GRIHA Criterion 30 Certificate</h3><div class="type">PDF · Green Building Rating</div></div><i class="ri-download-2-line dl"></i></a>
+        <a class="doc reveal" href="#" aria-label="Download GREENR scorecard"><div class="ico"><i class="ri-leaf-line"></i></div><div class="info"><h3>GREENR Scorecard</h3><div class="type">PDF · Self-reported</div></div><i class="ri-download-2-line dl"></i></a>
+        <div class="doc soon reveal"><div class="ico"><i class="ri-time-line"></i></div><div class="info"><h3>EPD &amp; Annual Sustainability Report</h3><div class="type">Coming as registered</div></div><span class="tag-soon">Soon</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6 · BLOG / INSIGHTS ============ -->
+  <section class="section" id="insights">
+    <div class="wrap">
+      <div class="section-head reveal" style="display:flex;justify-content:space-between;align-items:flex-end;max-width:100%;gap:20px;flex-wrap:wrap">
+        <div>
+          <div class="eyebrow">Insights</div>
+          <h2 style="margin-top:18px">Carbon, construction &amp; credibility.</h2>
+        </div>
+        <a href="#" class="btn btn-ghost">All articles <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <div class="grid cols-3">
+        <article class="post reveal">
+          <div class="pic"><img src="https://readdy.ai/api/search-image?query=deep%20construction%20excavation%20trench%20site%2C%20heavy%20machinery%20digging%2C%20muddy%20soil%20exposed%2C%20chaotic%20messy%20foundation%20work%2C%20workers%20in%20hard%20hats%2C%20dark%20earth%20torn%20apart%2C%20environmental%20damage%2C%20dramatic%20overhead%20view%2C%20moody%20industrial%20photography%2C%20no%20text&width=700&height=480&seq=problem-excavation-v2&orientation=landscape" alt="Excavation site" loading="lazy"></div>
+          <div class="body"><div class="cat">Education</div><h3>Why conventional foundations are a hidden carbon hotspot</h3><p>Where embodied carbon hides in a typical Indian project — and why foundation materials matter more than most assume.</p><a class="more" href="#">Read article <i class="ri-arrow-right-line"></i></a></div>
+        </article>
+        <article class="post reveal">
+          <div class="pic"><img src="https://readdy.ai/api/search-image?query=luxury%20eco%20resort%20in%20Western%20Ghats%20Kerala%20forest%2C%20sustainable%20architecture%20blending%20with%20nature%2C%20wooden%20structures%20on%20undisturbed%20forest%20floor%2C%20misty%20green%20canopy%2C%20premium%20hospitality%2C%20no%20text%2C%20cinematic%20photography&width=600&height=380&seq=who-resort-v1&orientation=landscape" alt="Green building" loading="lazy"></div>
+          <div class="body"><div class="cat">Builder Guidance</div><h3>What GRIHA Criterion 30 means for your building rating</h3><p>How specifying PEN contributes to your GRIHA point score — and exactly what documentation is needed.</p><a class="more" href="#">Read article <i class="ri-arrow-right-line"></i></a></div>
+        </article>
+        <article class="post reveal">
+          <div class="pic"><img src="https://readdy.ai/api/search-image?query=geotechnical%20field%20load%20test%20on%20foundation%20pile%2C%20engineers%20measuring%20soil%20bearing%20capacity%2C%20technical%20equipment%2C%20Kerala%20India%20terrain%2C%20professional%20engineering%20site%20test%2C%20warm%20afternoon%20light%2C%20no%20text%2C%20documentary%20photography&width=600&height=380&seq=validation-field-v1&orientation=landscape" alt="Methodology" loading="lazy"></div>
+          <div class="body"><div class="cat">Methodology</div><h3>How we calculated our carbon savings: methodology explained</h3><p>A transparent, plain-language walkthrough of the LCA — what was measured, what was not, and what the numbers mean.</p><a class="more" href="#">Read article <i class="ri-arrow-right-line"></i></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7 · PARTNERS & VALIDATORS ============ -->
+  <section class="section" id="partners" style="background:var(--bg-alt)">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow">Partners &amp; Validators</div>
+        <h2>The credentialing ecosystem behind PEN.</h2>
+      </div>
+      <div class="partners">
+        <div class="logo-tile reveal"><div class="mark">NIT</div><div class="nm">NIT Calicut</div><div class="ctx">Structural validation</div></div>
+        <div class="logo-tile reveal"><div class="mark"><i class="ri-leaf-line"></i></div><div class="nm">GRIHA</div><div class="ctx">Green building rating</div></div>
+        <div class="logo-tile reveal"><div class="mark">BIS</div><div class="nm">BIS</div><div class="ctx">Standard in progress</div></div>
+        <div class="logo-tile reveal"><div class="mark">BMT</div><div class="nm">BMTPC</div><div class="ctx">Performance appraisal</div></div>
+        <div class="logo-tile reveal"><div class="mark"><i class="ri-bar-chart-box-line"></i></div><div class="nm">I-NAT Studio</div><div class="ctx">ISO 14040/44 LCA</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8 · CARBON CALCULATOR (PLACEHOLDER) ============ -->
+  <section class="section" id="carbon-calculator">
+    <div class="wrap">
+      <div class="soon-panel reveal">
+        <span class="soon-badge"><i class="ri-tools-line"></i> Coming in Phase 2</span>
+        <h2>Carbon &amp; Cement Savings Calculator</h2>
+        <p>Input the number of PEN nodes specified for your project and get an instant, EPD-backed estimate of CO₂ avoided and cement saved versus a conventional foundation. We're anchoring this to our registered EPD so the number is third-party verified and unassailable.</p>
+        <form class="notify" id="notifyForm" novalidate>
+          <input type="email" id="notifyEmail" placeholder="your@email.com" aria-label="Email for launch notification" autocomplete="email" required>
+          <button type="submit" class="btn btn-primary"><i class="ri-notification-3-line"></i> Notify me at launch</button>
+        </form>
+        <div class="notify-ok" id="notifyOk"><i class="ri-check-line"></i> You're on the list — we'll email you when the calculator goes live.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section band-dark" style="padding-top:0">
+    <div class="wrap center reveal">
+      <h2 style="font-size:clamp(26px,4vw,42px)">Specifying for a green build?</h2>
+      <p class="lead" style="max-width:50ch;margin:16px auto 0">Talk to our engineers about how PEN contributes to your GRIHA points and carbon targets.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px">
+        <a href="index.html#cta" class="btn btn-primary btn-lg"><i class="ri-map-pin-line"></i> Book a Site Assessment</a>
+        <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20have%20a%20sustainability%20question%20about%20PEN%20Foundation" class="btn btn-wa btn-lg"><i class="ri-whatsapp-line"></i> WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img src="PEN-Logo.png" alt="PEN Foundation by C-DISC Technologies">
+          <p>C-DISC Technologies Pvt. Ltd. Deep-tech construction innovation. Kozhikode, Kerala, India.</p>
+          <p class="slogan">From Soil We Rise.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#technology">Technology</a></li>
+            <li><a href="index.html#performance">Performance</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="#downloads">Reports &amp; Downloads</a></li>
+            <li><a href="#insights">Insights</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="ri-map-pin-line"></i> Kozhikode, Kerala, India</li>
+            <li><a href="mailto:info@cdisc.in"><i class="ri-mail-line"></i> info@cdisc.in</a></li>
+            <li><a href="tel:+91XXXXXXXXXX"><i class="ri-phone-line"></i> +91 XXXXX XXXXX</a></li>
+            <li><a href="https://wa.me/91XXXXXXXXXX"><i class="ri-whatsapp-line"></i> WhatsApp</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Started</h4>
+          <p style="font-size:15px;margin-bottom:16px">Ready to build faster, stronger, and greener?</p>
+          <a href="index.html#cta" class="btn btn-primary">Book Assessment</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span class="cr">© 2024 C-DISC Technologies Pvt. Ltd. All rights reserved.</span>
+        <span class="spec">PEN Foundation · CD-PEN-32.3.2.1500 · IS 2911 · GRIHA Criterion 30</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%27m%20interested%20in%20PEN%20Foundation" class="fab" aria-label="Chat on WhatsApp"><i class="ri-whatsapp-line"></i></a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+  <script src="sustainability.js"></script>
+</body>
+</html>

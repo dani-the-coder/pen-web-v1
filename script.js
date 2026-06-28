@@ -93,7 +93,7 @@
      "Book a free site assessment. Our engineers will visit your site, evaluate soil conditions, and recommend the optimal PEN Foundation configuration for your project. There is no obligation — just a technical evaluation to help you make an informed decision."],
   ];
   const faqList = document.getElementById("faqList");
-  FAQ.forEach(([q, a], i) => {
+  if (faqList) FAQ.forEach(([q, a], i) => {
     const item = document.createElement("div");
     item.className = "faq-item reveal";
     item.innerHTML =
@@ -122,7 +122,9 @@
   const TRAD_DAYS_PER_POINT = 2.1; // traditional
   const PEN_HOURS_PER_POINT = 2;   // PEN
   const COST_PER_POINT = 45000;    // ₹ saved per point (midpoint)
-  const CO2_PER_POINT = 65;        // kg saved per point
+  // NOTE: carbon/cement savings intentionally excluded here — they belong to the
+  // EPD-backed calculator on the Sustainability page (Phase 2). Don't add a
+  // carbon figure to this estimator without an ISO/EPD source citation.
 
   const ptsEl = document.getElementById("pts");
   const ptsVal = document.getElementById("ptsVal");
@@ -134,13 +136,11 @@
     const penDays = (pts * PEN_HOURS_PER_POINT) / 8; // 8 working hrs
     const daysSaved = Math.max(0, Math.round((tradDays - penDays) * mult));
     const cost = ((pts * COST_PER_POINT * mult) / 100000).toFixed(1); // ₹ lakh
-    const co2 = Math.round(pts * CO2_PER_POINT * mult);
     const weeks = (daysSaved / 7).toFixed(1);
 
     ptsVal.textContent = pts;
     document.getElementById("rDays").textContent = daysSaved;
     document.getElementById("rCost").textContent = cost;
-    document.getElementById("rCO2").textContent = co2.toLocaleString("en-IN");
     document.getElementById("rWeeks").textContent =
       "That's " + weeks + " weeks back in your life";
 
@@ -149,20 +149,22 @@
     ptsEl.style.background =
       "linear-gradient(90deg, var(--teal) " + pct + "%, var(--bg-alt) " + pct + "%)";
   }
-  ptsEl.addEventListener("input", calc);
-  document.querySelectorAll(".ptype").forEach((b) => {
-    b.addEventListener("click", () => {
-      document.querySelectorAll(".ptype").forEach((x) => x.classList.remove("active"));
-      b.classList.add("active");
-      mult = +b.dataset.mult;
-      calc();
+  if (ptsEl) {
+    ptsEl.addEventListener("input", calc);
+    document.querySelectorAll(".ptype").forEach((b) => {
+      b.addEventListener("click", () => {
+        document.querySelectorAll(".ptype").forEach((x) => x.classList.remove("active"));
+        b.classList.add("active");
+        mult = +b.dataset.mult;
+        calc();
+      });
     });
-  });
-  calc();
+    calc();
+  }
 
   /* ---------- CONTACT FORM ---------- */
   const form = document.getElementById("assessForm");
-  form.addEventListener("submit", (e) => {
+  if (form) form.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = form.querySelector("#f-name");
     const email = form.querySelector("#f-email");
