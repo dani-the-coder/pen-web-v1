@@ -141,6 +141,13 @@ img { max-width: 100%; display: block; }
 .nav-icon:hover { color: var(--teal); border-color: var(--teal); transform: translateY(-2px); }
 .nav-toggle { display: none; background: none; border: none; font-size: 28px; color: var(--ink); cursor: pointer; width: 44px; height: 44px; }
 
+/* nav over the dark 3D hero (only while not yet showing the light scrolled bg) */
+.nav.over-dark:not(.scrolled) .brand img { filter: brightness(0) invert(1); }
+.nav.over-dark:not(.scrolled) .nav-links a { color: rgba(255,255,255,.82); }
+.nav.over-dark:not(.scrolled) .nav-links a:hover { color: #fff; background: rgba(255,255,255,.12); }
+.nav.over-dark:not(.scrolled) .nav-icon { color: #fff; border-color: rgba(255,255,255,.35); background: transparent; }
+.nav.over-dark:not(.scrolled) .nav-toggle { color: #fff; }
+
 /* mobile menu */
 .mobile-menu {
   position: fixed; inset: 0; z-index: var(--z-overlay);
@@ -612,4 +619,70 @@ img { max-width: 100%; display: block; }
   .partners { grid-template-columns: repeat(2,1fr); }
   .notify { flex-direction: column; }
   .notify .btn { width:100%; }
+}
+
+/* =========================================================
+   3D HERO (Spline) — white + light-grey grid, 4-part choreography
+   ========================================================= */
+#hero3d {
+  position: relative;
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(to right, rgba(15,42,46,.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15,42,46,.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  color: var(--ink);
+  overflow: hidden;
+}
+#hero3d .eyebrow { color: var(--teal); }
+#hero3d .eyebrow::before { background: var(--coral); }
+#hero3d h2 { color: var(--ink); font-size: clamp(30px, 5vw, 56px); line-height: 1.02; letter-spacing: -.03em; }
+#hero3d p { color: var(--ink-soft); font-size: clamp(16px, 1.7vw, 19px); }
+
+/* fixed 3D layer — moved across the parts (CSS transform) by hero3d.js */
+.h3d-canvas-cont { position: fixed; inset: 0; z-index: 3; pointer-events: none; will-change: transform, opacity; }
+.h3d-canvas-cont spline-viewer, #canvas3d { width: 100%; height: 100%; display: block; }
+
+/* every part sits above the bar, below the canvas object */
+.h3d-screen { position: relative; z-index: 2; }
+.h3d-screen .wrap, .h3d-info { pointer-events: none; }
+.h3d-screen a, .h3d-screen button { pointer-events: auto; }
+
+/* intro */
+.h3d-intro { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; padding: 130px 0 70px; }
+.h3d-title { font-size: clamp(44px, 10vw, 132px); font-weight: 800; line-height: .96; letter-spacing: -.045em; color: var(--ink); margin-top: 18px; }
+.h3d-title .keyboard { display: inline-block; }
+.key { display: inline-block; transition: transform .2s; }
+@keyframes h3dPress { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(12px); } }
+
+/* split parts (info on one side, 3D object on the other) */
+.h3d-split { min-height: 90vh; display: flex; align-items: center; justify-content: space-between; gap: 40px; padding: 0 clamp(24px, 5vw, 80px); }
+.h3d-spacer { width: 34%; }
+.h3d-info { width: min(40%, 460px); display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }
+
+/* end part */
+.h3d-end { min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 16px; padding-bottom: 40px; }
+.h3d-continue { color: var(--teal-dark); font-family: var(--font-head); font-weight: 600; font-size: 16px; display: inline-flex; align-items: center; gap: 8px; }
+.h3d-continue:hover { color: var(--coral-strong); }
+
+/* secondary ghost button (kept for the part-2 CTA) */
+.btn-ghost-light { background: transparent; color: var(--teal-dark); border-color: var(--line); }
+.btn-ghost-light:hover { border-color: var(--teal); background: var(--surface); color: var(--teal); }
+
+/* scroll cue */
+.h3d-scroll {
+  position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 2;
+  width: 28px; height: 46px; border: 2px solid var(--teal-dark); border-radius: 999px;
+  display: flex; justify-content: center; padding-top: 8px; background: rgba(255,255,255,.5);
+}
+.h3d-scroll .dot { width: 5px; height: 9px; border-radius: 999px; background: var(--coral-strong); animation: scrolldot 1.6s var(--ease) infinite; }
+@keyframes scrolldot { 0%{opacity:0;transform:translateY(-5px)} 40%{opacity:1} 100%{opacity:0;transform:translateY(11px)} }
+
+@media (max-width: 860px) {
+  .h3d-split { flex-direction: column; align-items: flex-start; justify-content: center; padding-top: 120px; padding-bottom: 120px; }
+  .h3d-info { width: 100%; }
+  .h3d-spacer { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .h3d-scroll .dot { animation: none; }
 }

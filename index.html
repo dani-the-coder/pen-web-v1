@@ -63,7 +63,55 @@
     </div>
   </div>
 
-  <span id="top"></span>
+  <!-- ============ 3D HERO (Spline) — 4-part scroll choreography ============ -->
+  <!-- Placeholder copy below — edit the [ ... ] text freely.
+       The 3D object animates across the 4 parts as you scroll.
+       Swap the object by editing SCENE_URL / OBJECT_NAME in hero3d.js -->
+  <section id="hero3d">
+    <span id="top"></span>
+
+    <!-- fixed 3D layer.  Change the scene via SCENE_URL in hero3d.js -->
+    <div class="h3d-canvas-cont"><canvas id="canvas3d"></canvas></div>
+
+    <!-- PART 0 · intro -->
+    <div class="h3d-screen h3d-intro">
+      <div class="wrap">
+        <p class="eyebrow">[ Eyebrow — short tagline ]</p>
+        <h1 class="h3d-title">[ YOUR ]<br>[ HEADLINE ]<br>[ YOUR ]<br>
+          <span class="keyboard">
+            <span class="key">K</span><span class="key">E</span><span class="key">Y</span><span class="key">W</span><span class="key">O</span><span class="key">R</span><span class="key">D</span>
+          </span>
+        </h1>
+      </div>
+      <a href="#part1" class="h3d-scroll" aria-label="Scroll down"><span class="dot"></span></a>
+    </div>
+
+    <!-- PART 1 · object slides left & scales up -->
+    <div id="part1" class="h3d-screen h3d-split">
+      <div class="h3d-spacer"></div>
+      <div class="h3d-info wrap-r">
+        <h2>[ Part 1 heading ]</h2>
+        <p>[ Part 1 supporting copy — a sentence or two you can edit later. ]</p>
+        <a class="btn btn-primary btn-lg" href="#cta">[ Primary CTA ]</a>
+      </div>
+    </div>
+
+    <!-- PART 2 · object slides right & scales down -->
+    <div id="part2" class="h3d-screen h3d-split">
+      <div class="h3d-info wrap-l">
+        <h2>[ Part 2 heading ]</h2>
+        <p>[ Part 2 supporting copy — a sentence or two you can edit later. ]</p>
+        <a class="btn btn-ghost-light btn-lg" href="#technology">[ Secondary CTA ]</a>
+      </div>
+      <div class="h3d-spacer"></div>
+    </div>
+
+    <!-- PART 3 · object returns to center -->
+    <div id="part3" class="h3d-screen h3d-end">
+      <h2>[ Closing line placeholder ]</h2>
+      <a href="#hero" class="h3d-continue">[ Continue ] <i class="ri-arrow-down-line"></i></a>
+    </div>
+  </section>
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
@@ -579,5 +627,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
+  <!-- 3D hero: Spline runtime + scroll choreography (dynamic import inside) -->
+  <script defer src="hero3d.js"></script>
 </body>
 </html>
